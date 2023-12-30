@@ -1,0 +1,13 @@
+.bottom-container{
+    /* position:fixed; */
+    bottom: 0;
+    left: 0;
+    height: 7vh;
+  width: 100%;
+    background-color: #2E0052;
+    text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+}
