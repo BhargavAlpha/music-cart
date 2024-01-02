@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import "./Home.css";
-import Navbar from '../../components/navbar/Navbar'; 
+import Navbar from "../../components/navbar/Navbar"; 
 import Promo from "../../components/promo/Promo";
 import { useMediaQuery } from 'react-responsive';
 import NavbarMobile from '../../components/navbar/NavbarMobile';
 import PromoMobile from "../../components/promo/PromoMobile";
-//import MobileFooter from "./Body/MobileBody";
 import { MyContext } from "../../context/MyContext";
 import { useContext } from "react";
 import Body from "../../components/body/Body";
@@ -27,17 +26,10 @@ const Home = () => {
 
   return (
     <div className="mainHome">
-      {/* <Header /> */}
       {isDesktopOrLaptop ?<Navbar />: <NavbarMobile/> }
       {isDesktopOrLaptop ?<Promo />: <PromoMobile/> }
       {isDesktopOrLaptop ?<Body />: <BodyMobile/> }
       {isDesktopOrLaptop ?<Footer />: "" }
-
-
-      
-      {/* <Banner /> */}
-      {/* <Footer /> */}
-      
       
     </div>
   );

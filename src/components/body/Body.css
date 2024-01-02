@@ -158,13 +158,13 @@ select {
 
 
   .all-products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Adjust the gap as needed */
     margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
   }
   .item-image svg{
+    cursor: pointer;
     position: absolute;
     top: 11.5rem;
     left:10.5rem;
@@ -180,6 +180,8 @@ select {
     margin:1rem 0rem;
     padding:1rem;
     position:relative;
+    display: grid;
+    place-items: center;
    
     @media (max-width : 600px) {
       padding: 1rem;
@@ -201,6 +203,7 @@ select {
     margin-top: 1rem;
     margin-left: 0.5rem;
     margin-bottom: 1rem;
+    letter-spacing: 1px;
 }
 
 

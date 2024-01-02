@@ -1,21 +1,22 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//import Health from "./components/Health/Health";
-//import NotFound from "./components/NotFound/NotFound";
+import ServerStatus from './components/serverStatus/ServerStatus';
+import NotFound from './components/Error/NotFound';
 import Home from "./pages/Home/Home";
-//import ProductDetail from './components/viewProduct/ProductDetail';
-//import Congratulation from './components/Congratulations/Congratulation';
-//import ViewCart from './components/ViewCart/ViewCart';
+import ProductView from './components/productCard/ProductCard';
+import Success from './components/success/Success';
+import ViewCart from './components/cart/ViewCart';
 import { MyContext } from './context/MyContext';
 import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-//import MobileviewProduct from './components/viewProduct/MobileviewProduct';
-// import Login from './components/Login/Login';
-// import MobileLogin from './components/Login/MobileLogin';
-// import SignUp from './components/Login/SignUp';
-// import MobileSignUp from './components/Login/MobileSignUp';
-// import Cart from './components/ViewCart/Cart';
-// import Checkout from './components/Home/Checkout/Checkout';
+import ProductViewMobile from './components/productCard/ProductviewMobile';
+ import Login from './pages/Login/Login';
+ import LoginMobile from './pages/Login/LoginMobile';
+ import SignUp from './pages/Signup/Signup';
+ import SignUpMobile from './pages/Signup/SignupMobile';
+import SignupMobile from './pages/Signup/SignupMobile';
+import Cart from './components/cart/Cart';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
   const [loggedIn , setLoggedIn] = useState(true);
@@ -26,6 +27,19 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={ isDesktopOrLaptop ?<Login/> :<LoginMobile/>} />
+          <Route path="/register" element={ isDesktopOrLaptop ?<SignUp/> :<SignupMobile/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/health" element={<ServerStatus />} />
+          <Route path="/login" element={ isDesktopOrLaptop ?<Login/> :<LoginMobile/>} />
+          <Route path="/register" element={ isDesktopOrLaptop ?<SignUp/> :<SignUpMobile/>} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/viewProduct" element={ isDesktopOrLaptop ?<ProductView/> : <ProductViewMobile/>} />
+          <Route path="/viewCart" element={<ViewCart />} />
+          <Route path="/Cart-items" element={<Cart/>}  />
+          <Route path="/checkout" element={<Checkout/>}  />
+          <Route path="/congrats" element={<Success />} />
+
         </Routes>
         
       </Router>

@@ -1,9 +1,15 @@
 .login-container{
     margin-left: 35vw;
-    margin-top: 100px ;
+    margin-top: 3vh ;
+    display: flex;
+    flex-direction: column;
     width: 30vw;
-    font-family: sans-serif;
+   
 }
+.login{
+    padding-bottom: 7vh;
+}
+ 
 
 .login-container img{
     height: 7vh;
@@ -11,13 +17,15 @@
     align-self: center;
 }
 .login-form{
+  
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
    
    border: 2px solid #D9D9D9;
    border-radius: 15px;
-   /* padding: 3px 5px; */
+   padding: 3vh 5vh;
   
    margin: 3vh 0vh;
 
@@ -45,39 +53,44 @@
 
 }
 
+.form-field{
+    
+    display: flex;
+    flex-direction: column;
+    padding:2vh;
 
-.heading{
-    font-size: 30px;
-    padding-left: 2px;
-  }
+}
 
+.login-form input{
+    padding: 1vh 4vw;
+    border-radius: 5px;
+    border: 2px solid #D9D9D9;
+}
 #form-btn{
-    margin-top: 15px;
     background-color: #2E0052;
     color: white;
     border: none;
+    cursor: pointer;
 }
-.create-btn{
+.crete-btn{
     padding: 1vh 4vw;
     border: 2px solid #D9D9D9;
     border-radius: 5px;
     text-align: center;
-    cursor: pointer;
 
 }
-.hr-lines {
+.hr-lines{
     display: flex;
-    align-items: center;
-  }
-  
-  .left-line,
-  .right-line {
-    flex: 1;
-    height: 1px;
-    background-color: #ccc;
-    margin: 0 10px; /* Adjust margin as needed */
-  }
-
+    flex-direction: row;
+   
+   
+}
+.hr-lines hr{
+    width: 150px;
+    font-weight: 800;
+    height: 0px;
+    color: black;
+}
 
 .already-sign-in{
     text-align: center;
@@ -87,14 +100,12 @@
     flex-direction: column;
     padding:1vh;
 }
-.form-itm{
-    margin-top: 10px;
-    padding: 0;
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+.heading{
+    font-size: 30px;
+    padding-left: 2px;
+  }
+  .signin-btnn{
+    border: none;
+    background: none;
+    text-decoration: underline;
+  }

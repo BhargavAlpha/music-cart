@@ -10,10 +10,10 @@ const Promo = () => {
       <div className="heading-section">
         <div className="banner-icon">
         <img src={heading} alt="Music Art" className="heading-img"/>
-        <span><b>Home</b></span>
+        <span className="home"><b>Home</b></span>
         </div>
       
-        <button className="view-cart-btn" onClick={()=>{navigate('cart-items')}}  > <i className="ri-shopping-cart-2-line"></i> View cart</button>
+        <button className="view-cart-btn" onClick={()=>{navigate('cart-items')}}  > <i className="ri-shopping-cart-2-line"></i> View Cart</button>
       </div>
       <div className="banner_image">
         <img src={bannerImage} alt="" />

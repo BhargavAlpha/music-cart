@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
+import Calllogo from '../../assets/Call.png';
 import { Link, useNavigate } from "react-router-dom";
 import { MyContext } from "../../context/MyContext";
 import { useContext } from "react";
@@ -25,18 +26,21 @@ const Navbar = () => {
 
   return (
     <div className="header">
-      {/* <span>  </span> */}
-      <span><i className="ri-phone-line" ></i> 912121131313 </span>
-      <span>Get 50% off on selected items | Shop Now</span>
+      
+      <div className="call-info">
+       <img src={Calllogo} alt='call-logo' />
+       <div>912121131313 </div>
+      </div>
+      <span>Get 50% off on selected items &nbsp; | &nbsp; Shop Now</span>
       {loggedIn ? (
         <h3>
           <Link className="header_login_links" onClick={()=>{logOut();
-            }}>logout</Link>
+            }}>Logout</Link>
         </h3>
       ) : (
         <div>
           
-          <Link className="header_login_links" to={'/login'}   >login</Link>
+          <Link className="header_login_links" to={'/login'}   >Login</Link>
           <span className="header_login_links"> &nbsp; &nbsp; | &nbsp;&nbsp; </span>
           <Link className="header_login_links" to={'/register'}   >SignUp</Link>
         </div>

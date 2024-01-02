@@ -22,9 +22,6 @@ const Body = () => {
   const [searchItem, setSearchItem] = useState("");
   const [gridview, setGridView] = useState(true);
 
-//   let shoppingCart = {
-//     items: [], // Array to store cart items
-//   };
 const [shoppingCart, setShoppingCart] = useState({
     items: [],
   });
@@ -47,7 +44,7 @@ const [shoppingCart, setShoppingCart] = useState({
     try {
       axios
         .get(
-          `http://localhost:4500/musicProducts/getAllMusicProducts?type=${filters.type}&sortBy=${filters.sortBy}&sortOrder=${filters.sortOrder}&color=${filters.color}&brand=${filters.brand}&minPrice=${filters.minPrice}&maxPrice=${filters.maxPrice}&price=${filters.price}&seacrh=${searchItem}`
+          `http://localhost:4500/musicProducts/getAllMusicProducts?type=${filters.type}&sortBy=${filters.sortBy}&sortOrder=${filters.sortOrder}&color=${filters.color}&brand=${filters.brand}&minPrice=${filters.minPrice}&maxPrice=${filters.maxPrice}&price=${filters.price}&serach=${searchItem}`
         )
         .then((response) => {
           let json = response.data;
@@ -76,7 +73,7 @@ const [shoppingCart, setShoppingCart] = useState({
     if (filterName === "price") {
       var priceRange = value;
       var priceArray = priceRange.split("-");
-      var minPrice = parseInt(priceArray[0], 10); // Parse the first part as an integer
+      var minPrice = parseInt(priceArray[0], 10); 
       var maxPrice = parseInt(priceArray[1], 10);
       setFilters({
         ...filters,
@@ -181,9 +178,9 @@ const [shoppingCart, setShoppingCart] = useState({
               >
                 <option value="all">Products Type</option>
                 <option value="all">Featured</option>
-                <option value="In-ear">In-Ear</option>
-                <option value="Over-ear">Over-Ear</option>
-                <option value="On-ear">On-Ear</option>
+                <option value="In-Ear">In-Ear</option>
+                <option value="Over-Ear">Over-Ear</option>
+                <option value="On-Ear">On-Ear</option>
               </select>
             </div>
             <div>
@@ -332,7 +329,7 @@ const [shoppingCart, setShoppingCart] = useState({
                     <b>Price - ₹{item.price}</b>
                   </p>
                   <p>
-                    {item.color} | {item.type}
+                    <b>{item.color} | {item.type} headphone</b>
                   </p>
                 </div>
               </div>
@@ -425,7 +422,7 @@ const [shoppingCart, setShoppingCart] = useState({
                   </p>
                   <p>
                     <b>
-                      {item.color} | {item.type}
+                      {item.color} | {item.type} headphone
                     </b>
                   </p>
                   <p>{item.description}</p>

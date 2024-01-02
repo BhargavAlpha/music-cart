@@ -1,4 +1,6 @@
 .header {
+  color: white;
+  font-family: sans-serif;
   height:10vh;
   max-width: 100vw;
   background-color: #2E0052;
@@ -20,4 +22,13 @@
   color:white;
   background : none;
   text-decoration: none
+}
+.phone-info{
+  display: flex;
+  gap:5px;
+}
+
+.call-info{
+  display: flex;
+  gap:10px;
 }
