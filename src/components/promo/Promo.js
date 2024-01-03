@@ -1,7 +1,7 @@
 import React from "react";
 import "./Promo.css";
 import heading from '../../assets/heading.png';
-import bannerImage from '../../assets/bannerImage.png';
+import bannerImage from '../../assets/banner.png';
 import { useNavigate } from 'react-router-dom';
 const Promo = () => {
   const navigate = useNavigate()

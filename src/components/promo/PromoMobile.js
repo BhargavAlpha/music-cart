@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImage from '../../assets/bannerImage.png';
+import bannerImage from '../../assets/banner.png';
 const PromoMobile = () => {
     return (
         <div className="banner_image">
