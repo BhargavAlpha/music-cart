@@ -37,7 +37,7 @@ const LoginMobile = () => {
     const loginData = { email: input, mobile: input, password };
 
   
-    axios.post('http://localhost:4500/login', loginData)
+    axios.post('https://musicart-80cn.onrender.com/login', loginData)
       .then((response) => {
        localStorage.setItem("token", response.data.token)
         console.log(response.data);

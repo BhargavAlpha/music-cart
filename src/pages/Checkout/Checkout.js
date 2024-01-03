@@ -20,7 +20,7 @@ const Checkout = (props) => {
 
   const placeOrder =()=>{
     localStorage.removeItem('current');
-    axios.put(`http://localhost:4500/musicProducts/placeOrder/${current._id}/${user}`)
+    axios.put(`https://musicart-80cn.onrender.com/musicProducts/placeOrder/${current._id}/${user}`)
     .then((response) => { 
       
         console.log(response);

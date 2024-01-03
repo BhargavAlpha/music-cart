@@ -3,7 +3,7 @@ import "./ServerStatus.css";
 import Loading from "../loading/Loading";
 import axios from "axios";
 import NotFound from "../Error/NotFound";
-import BASEURL from "../../constants/base";
+;
 
 const ServerStatus = () => {
   const [healthData, setHealthData] = useState(null);
@@ -12,7 +12,7 @@ const ServerStatus = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`${BASEURL}/health`)
+      .get(`${'https://musicart-80cn.onrender.com'}/health`)
       .then((res) => {
         setHealthData(res.data);
       })

@@ -44,7 +44,7 @@ const [shoppingCart, setShoppingCart] = useState({
     try {
       axios
         .get(
-          `http://localhost:4500/musicProducts/getAllMusicProducts?type=${filters.type}&sortBy=${filters.sortBy}&sortOrder=${filters.sortOrder}&color=${filters.color}&brand=${filters.brand}&minPrice=${filters.minPrice}&maxPrice=${filters.maxPrice}&price=${filters.price}&serach=${searchItem}`
+          `https://musicart-80cn.onrender.com/musicProducts/getAllMusicProducts?type=${filters.type}&sortBy=${filters.sortBy}&sortOrder=${filters.sortOrder}&color=${filters.color}&brand=${filters.brand}&minPrice=${filters.minPrice}&maxPrice=${filters.maxPrice}&price=${filters.price}&serach=${searchItem}`
         )
         .then((response) => {
           let json = response.data;
@@ -110,7 +110,7 @@ const [shoppingCart, setShoppingCart] = useState({
     // localStorage.setItem("current",JSON.stringify(data));
     const user = localStorage.getItem("user");
     try {
-        axios.put(`http://localhost:4500/musicProducts/${value}/cart/${user}`)
+        axios.put(`https://musicart-80cn.onrender.com/musicProducts/${value}/cart/${user}`)
             .then((response) => { 
                 console.log(response);
                 showToastSuccessMessage();

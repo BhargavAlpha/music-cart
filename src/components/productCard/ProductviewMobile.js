@@ -18,7 +18,7 @@ const ProductViewMobile = () => {
       const [count,setCount] = useState(0);
       
       useEffect(() => {
-          axios.get(`http://localhost:4500/musicProducts/?_id=${localStorage.getItem("id")}`)
+          axios.get(`https://musicart-80cn.onrender.com/musicProducts/?_id=${localStorage.getItem("id")}`)
               .then((response) => { setData(response.data);setAbout(response.data.about) ; setRate( response.data.rating.rate) ; setCount(response.data.rating.count)})
               .catch((err) => { console.log(err) })
       }, [])
@@ -27,7 +27,7 @@ const ProductViewMobile = () => {
           localStorage.setItem("current",JSON.stringify(data))
           const user = localStorage.getItem("user");
           try {
-              axios.put(`http://localhost:4500/musicProducts/${data._id}/cart/${user}`)
+              axios.put(`https://musicart-80cn.onrender.com/musicProducts/${data._id}/cart/${user}`)
                   .then((response) => { 
                       console.log(response)
                   })                

@@ -18,14 +18,13 @@ const Cart = () => {
     let final_amount = 0;
 
     const placeOrder = () => {
-        // Assuming you want to place an order for all items in the cart
         const totalAmount = final_amount;
         localStorage.setItem("total", totalAmount);
         navigate('/checkout');
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:4500/musicProducts/getCart/${user}`)
+        axios.get(`https://musicart-80cn.onrender.com/musicProducts/getCart/${user}`)
             .then((response) => {
                 setData(response.data);
                 setTotalItems(response.data.length);
@@ -111,31 +110,33 @@ const Cart = () => {
                                     )
                                 })}
                             </div>
-                            <div className='table-details'>
-                                <table>
-                                    <thead>
-                                        <tr><td><b>PRICE DETAILS</b></td></tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Total MRP</td>
-                                            <td>:₹{final_amount}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Discount on MRP</td>
-                                            <td> : ₹0</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Convenience Fee</td>
-                                            <td> : ₹45</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr><td><b>Total Amount</b></td><td>₹ {final_amount}</td></tr>
-                                        <tr><td colSpan="2"><button className='buy-now' onClick={placeOrder}>Place order</button></td></tr>
-                                    </tfoot>
-                                </table>
-                            </div>
+                            {data.length > 0 && (
+                                <div className='table-details'>
+                                    <table>
+                                        <thead>
+                                            <tr><td><b>PRICE DETAILS</b></td></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Total MRP</td>
+                                                <td>:₹{final_amount}</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Discount on MRP</td>
+                                                <td> : ₹0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Convenience Fee</td>
+                                                <td> : ₹45</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr><td><b>Total Amount</b></td><td>₹ {final_amount}</td></tr>
+                                            <tr><td colSpan="2"><button className='buy-now' onClick={placeOrder}>Place order</button></td></tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

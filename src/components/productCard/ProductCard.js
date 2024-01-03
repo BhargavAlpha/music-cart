@@ -15,7 +15,7 @@ const ProductView = () => {
     const[rate,setRate] = useState();
     const[count,setCount] = useState()
     useEffect(() => {
-        axios.get(`http://localhost:4500/musicProducts/?_id=${localStorage.getItem("id")}`)
+        axios.get(`https://musicart-80cn.onrender.com/musicProducts/?_id=${localStorage.getItem("id")}`)
             .then((response) => { 
                 setData(response.data);
                 setAbout(response.data.about); 
@@ -34,7 +34,7 @@ const ProductView = () => {
         localStorage.setItem("current",JSON.stringify(data));
         const user = localStorage.getItem("user");
         try {
-            axios.put(`http://localhost:4500/musicProducts/${data._id}/cart/${user}`)
+            axios.put(`https://musicart-80cn.onrender.com/musicProducts/${data._id}/cart/${user}`)
                 .then((response) => { 
                     console.log(response)
                 })                

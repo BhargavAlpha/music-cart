@@ -59,7 +59,7 @@ const SignUp = () => {
     if (valid) {
       console.log('toast');
       axios
-        .post(`http://localhost:4500/register`, {
+        .post(`https://musicart-80cn.onrender.com/register`, {
           name: formValues.name,
           mobile: formValues.mobile,
           email: formValues.email,
