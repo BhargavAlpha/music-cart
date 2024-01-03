@@ -5,7 +5,7 @@ import heading from '../../assets/heading.png';
 import confettiImage from '../../assets/confetti.png';
 import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import NavbarHeader from '../navbar/NavbarHeader';
+import NavbarHeader from '../../pages/NavbarHeader';
 
 const Success = () => {
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' });

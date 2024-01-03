@@ -5,9 +5,8 @@ import './ViewCart.css';
 import Footer from '../footer/Footer';
 import Navigator from '../navigate/Navigate';
 import { useMediaQuery } from 'react-responsive';
-import NavbarHeader from '../navbar/NavbarHeader';
-import NavbarMobile from '../navbar/NavbarMobile';
-import Navbar from '../navbar/Navbar';
+import NavbarMobile from '../Navbar/NavbarMobile';
+import Navbar from '../Navbar/Navbar';
 
 
 const ViewCart = () => {

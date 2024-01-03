@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../navbar/Navbar";
+import Navbar from "../Navbar/Navbar.js";
 import { useNavigate } from 'react-router-dom';
 import heading from '../../assets/heading.png'
 import './ViewCart.css';
@@ -7,7 +7,7 @@ import axios from "axios";
 import Footer from "../footer/Footer";
 import Navigator from "../navigate/Navigate";
 import { useMediaQuery } from 'react-responsive';
-import NavbarMobile from "../navbar/NavbarMobile";
+import NavbarMobile from "../Navbar/NavbarMobile.js";
 
 const Cart = () => {
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' });

@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import NavbarMobile from '../navbar/NavbarMobile';
+import NavbarMobile from '../Navbar/NavbarMobile';
 import Navigate from '../navigate/Navigate';
 import axios from 'axios';
 import heading from '../../assets/heading.png'

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../navbar/Navbar';
+import Navbar from '../Navbar/Navbar.js';
 import './ProductCard.css';
 import heading from '../../assets/heading.png'
 import axios from 'axios';

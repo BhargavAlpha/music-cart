@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import "./Home.css";
-import Navbar from "../../components/navbar/Navbar"; 
+import Navbar from "../../components/Navbar/Navbar"; 
 import Promo from "../../components/promo/Promo";
 import { useMediaQuery } from 'react-responsive';
-import NavbarMobile from '../../components/navbar/NavbarMobile';
+import NavbarMobile from '../../components/Navbar/NavbarMobile';
 import PromoMobile from "../../components/promo/PromoMobile";
 import { MyContext } from "../../context/MyContext";
 import { useContext } from "react";

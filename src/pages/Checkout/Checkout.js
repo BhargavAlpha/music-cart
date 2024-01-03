@@ -5,10 +5,10 @@ import { useMediaQuery } from 'react-responsive';
 import axios from 'axios';
 import "./Checkout.css";
 
-import Footer from "../../components/footer/Footer";
-import NavbarHeader from "../../components/navbar/NavbarHeader";
-import NavigationIcons from "../../components/navigate/Navigate";
-import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer.js";
+import NavigationIcons from "../../components/navigate/Navigate.js";
+import NavbarHeader from "../NavbarHeader.js";
+import Navbar from "../../components/Navbar/Navbar.js";
 const Checkout = (props) => {
 
     const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1224px)'});
