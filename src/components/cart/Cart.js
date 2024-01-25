@@ -40,10 +40,7 @@ const Cart = () => {
                     <div className='heading'>
                         <div className="heading-section">
                             <img src={heading} alt="Music Art" className="heading-img" />
-                            <p>Home/View Cart</p>
-                        </div>
-                        <div>
-                            <button>Cart</button>
+                            <p>Home/Cart</p>
                         </div>
                     </div>
                     <div className='back-to-home'>

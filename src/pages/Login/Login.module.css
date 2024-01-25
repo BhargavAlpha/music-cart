@@ -78,6 +78,7 @@ input {
   color: white;
   height: 40px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .policy {
@@ -109,6 +110,7 @@ input {
   color: black;
   background-color: white;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .footer {
@@ -184,4 +186,5 @@ input {
   width: 80%;
   height: 30px;
   font-size: 20px;
+  cursor: pointer;
 }

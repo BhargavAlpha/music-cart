@@ -35,7 +35,7 @@
     height: 2rem;
 }
 .back-to-home button{
-   
+   cursor: pointer;
     margin-top: 1rem;
     border: none;       
     color: white;
@@ -55,7 +55,9 @@
     width: 10rem;
     gap: 1rem;
 }
-
+.wide-cont{
+    display: flex;
+}
 .cart-product-details{
     margin: 2rem 0.25rem;
     margin-top: 1rem;
@@ -213,4 +215,7 @@
 }
 .tabu td select{
     width: 70%;
+}
+.wrapper{
+    display: flex;
 }
