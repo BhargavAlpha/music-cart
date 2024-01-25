@@ -11,10 +11,7 @@ import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import ProductViewMobile from './components/productCard/ProductviewMobile';
  import Login from './pages/Login/Login';
- import LoginMobile from './pages/Login/LoginMobile';
  import SignUp from './pages/Signup/Signup';
- import SignUpMobile from './pages/Signup/SignupMobile';
-import SignupMobile from './pages/Signup/SignupMobile';
 import Cart from './components/cart/Cart';
 import Checkout from './pages/Checkout/Checkout';
 
@@ -27,12 +24,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={ isDesktopOrLaptop ?<Login/> :<LoginMobile/>} />
-          <Route path="/register" element={ isDesktopOrLaptop ?<SignUp/> :<SignupMobile/>} />
+          <Route path="/login" element={ <Login/> } />
+          <Route path="/register" element={ <SignUp/> } />
           <Route path="/" element={<Home />} />
           <Route path="/health" element={<ServerStatus />} />
-          <Route path="/login" element={ isDesktopOrLaptop ?<Login/> :<LoginMobile/>} />
-          <Route path="/register" element={ isDesktopOrLaptop ?<SignUp/> :<SignUpMobile/>} />
           <Route path="*" element={<NotFound />} />
           <Route path="/viewProduct" element={ isDesktopOrLaptop ?<ProductView/> : <ProductViewMobile/>} />
           <Route path="/viewCart" element={<ViewCart />} />

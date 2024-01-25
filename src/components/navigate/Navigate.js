@@ -22,6 +22,7 @@ const NavigationIcons = () => {
         });
     }
     const handleIconChange =(icon)=>{
+        naviagte('/');
         setCurrentpage(icon);
     }
     const gotoCart =()=>{
@@ -47,7 +48,7 @@ const NavigationIcons = () => {
              <div className='bottom-navigation'  > 
                 {/* <div>{GoHome} sita </div> */}
                  <div>
-                     <a  onClick={() => {handleIconChange('home')}} className={currentPage === 'home' ? 'active' : ''} >     <GoHome/>  </a>
+                     <a  onClick={() => {handleIconChange('home')}} className={currentPage === 'home' ? 'active' : ''} >    <GoHome/>  </a>
                      <p>Home</p>
                 </div>
                 <div>

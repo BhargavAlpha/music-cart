@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Footer from '../footer/Footer';
 
 
-const ProductView = () => {
+const ProductCard = () => {
     const navigate = useNavigate();
     
     const [data, setData] = useState({})
@@ -123,4 +123,4 @@ const ProductView = () => {
     );
 };
 
-export default ProductView;
+export default ProductCard;

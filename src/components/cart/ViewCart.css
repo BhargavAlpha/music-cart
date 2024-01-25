@@ -1,11 +1,7 @@
-.view-cart{
-    padding-bottom: 7vh;
-}
 .cart-section{
     margin: 1rem 4rem;
     font-family: sans-serif;
     height: 80vh;
-    width: 70vw;
 }
 .heading{
     display: flex;
@@ -195,6 +191,8 @@
 .sita img{
     height: 100%;
     width: 15rem;
+
+
 }
 .tabu{
     width: 70%;
@@ -215,12 +213,4 @@
 }
 .tabu td select{
     width: 70%;
-}
-
-button{
-    cursor: pointer;
-}
-
-.wrapper{
-    display: flex;
 }

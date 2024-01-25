@@ -30,7 +30,6 @@ const Home = () => {
       {isDesktopOrLaptop ?<Promo />: <PromoMobile/> }
       {isDesktopOrLaptop ?<Body />: <BodyMobile/> }
       {isDesktopOrLaptop ?<Footer />: "" }
-      
     </div>
   );
 };

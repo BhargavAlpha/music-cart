@@ -13,7 +13,7 @@ const Promo = () => {
         <span className="home"><b>Home</b></span>
         </div>
       
-        <button className="view-cart-btn" onClick={()=>{navigate('cart-items')}}  > <i className="ri-shopping-cart-2-line"></i> View Cart</button>
+        <button className="view-cart-btn" onClick={()=>{navigate('cart-items')}} > View Cart</button>
       </div>
       <div className="banner_image">
         <img src={bannerImage} alt="" />
